@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="B5z-KZ-HyS">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jp-KY-cYj">
                                 <rect key="frame" x="0.0" y="547" width="375" height="60"/>
@@ -42,7 +42,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B5z-KZ-HyS" secondAttribute="bottom" id="R1N-BD-eBS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4jp-KY-cYj" secondAttribute="trailing" id="axB-xF-qbb"/>
                             <constraint firstItem="B5z-KZ-HyS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ilf-56-bbx"/>
-                            <constraint firstItem="B5z-KZ-HyS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="syK-IH-bYQ"/>
+                            <constraint firstItem="B5z-KZ-HyS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="syK-IH-bYQ"/>
                             <constraint firstItem="4jp-KY-cYj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zuy-Ez-aKU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -50,11 +50,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="CDi-8J-rWz">
             <objects>
-                <viewController id="M5R-SR-75H" sceneMemberID="viewController">
+                <viewController id="M5R-SR-75H" customClass="QuizViewController" customModule="SwiftQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DYw-Wb-bMd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +81,7 @@
                                 <rect key="frame" x="0.0" y="442" width="375" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaZ-Vn-1bF">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xaZ-Vn-1bF">
                                         <rect key="frame" x="0.0" y="1" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -89,8 +90,11 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="0.28235294119999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectAnswerClick:" destination="M5R-SR-75H" eventType="touchUpInside" id="iqX-Ui-YfO"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGW-y1-ZjS">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zGW-y1-ZjS">
                                         <rect key="frame" x="0.0" y="46" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,8 +103,11 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="0.28235294119999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectAnswerClick:" destination="M5R-SR-75H" eventType="touchUpInside" id="S3q-Uk-OXx"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-cp-Jqy">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-cp-Jqy">
                                         <rect key="frame" x="0.0" y="91" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,8 +116,11 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="0.28235294119999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectAnswerClick:" destination="M5R-SR-75H" eventType="touchUpInside" id="3CF-9P-cIu"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS9-sm-rR3">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wS9-sm-rR3">
                                         <rect key="frame" x="0.0" y="136" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -119,6 +129,9 @@
                                         <state key="normal">
                                             <color key="titleColor" red="1" green="0.28235294119999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="selectAnswerClick:" destination="M5R-SR-75H" eventType="touchUpInside" id="djL-Aa-WYI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -135,17 +148,23 @@
                         <viewLayoutGuide key="safeArea" id="1fP-ez-IOX"/>
                     </view>
                     <connections>
-                        <segue destination="761-W1-ihJ" kind="show" id="EV0-CN-f6E"/>
+                        <outlet property="questionLabel" destination="yWd-Jr-01r" id="S3d-k5-iXe"/>
+                        <outlet property="timerView" destination="pmO-NN-phB" id="10b-cj-eJY"/>
+                        <outletCollection property="answersButtonCollection" destination="xaZ-Vn-1bF" collectionClass="NSMutableArray" id="ev2-F3-Zcy"/>
+                        <outletCollection property="answersButtonCollection" destination="zGW-y1-ZjS" collectionClass="NSMutableArray" id="PeP-VS-W1z"/>
+                        <outletCollection property="answersButtonCollection" destination="nfp-cp-Jqy" collectionClass="NSMutableArray" id="SZW-7G-wge"/>
+                        <outletCollection property="answersButtonCollection" destination="wS9-sm-rR3" collectionClass="NSMutableArray" id="ImR-C9-jIM"/>
+                        <segue destination="761-W1-ihJ" kind="show" identifier="resultSegue" id="EV0-CN-f6E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Sx-sh-NQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="983" y="134"/>
+            <point key="canvasLocation" x="924" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="JuP-As-MSe">
             <objects>
-                <viewController id="761-W1-ihJ" sceneMemberID="viewController">
+                <viewController id="761-W1-ihJ" customClass="ResultViewController" customModule="SwiftQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tkp-Zg-xXi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,11 +211,20 @@
                                 <state key="normal" title="Reiniciar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeClick:" destination="761-W1-ihJ" eventType="touchUpInside" id="5qZ-iL-4fe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UcB-wl-1rJ"/>
                     </view>
+                    <connections>
+                        <outlet property="answersLabel" destination="5vd-3E-ggI" id="a9v-TS-R5e"/>
+                        <outlet property="correctLabel" destination="gdx-yj-86S" id="Ty8-BO-5bV"/>
+                        <outlet property="scoreLabel" destination="wDB-QY-mAs" id="5Q1-Q3-J2I"/>
+                        <outlet property="wrongLabel" destination="Pt8-jQ-tzF" id="IG6-7i-398"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ay6-Bd-SnG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
